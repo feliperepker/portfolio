@@ -1,0 +1,93 @@
+h2{
+  color: $secondaryclr;
+  font-family: $ffsec;
+  font-size: 3em;
+  margin-bottom: 40px;
+}
+.about{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  margin-top: 60px;
+  margin-bottom: 90px;
+
+ 
+  p{
+    max-width: 600px;
+    width: 80vw;
+    color: $contrastclr;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    line-height: 25px;
+    font-weight: 300;
+  }
+
+  img{
+    width: 15vw;
+    position: absolute;
+    transform: rotate(-35deg);
+    left: 50px;
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+
+.astronaut{
+  width : 8vw;
+  bottom: 20px;
+  right: 40px;
+  position: absolute;
+  filter: grayscale(100%) brightness(70%);
+  transform: rotate(35deg);
+  animation: astronaut 6s infinite ease-in-out;
+}
+
+@keyframes astronaut {
+  50%{
+    margin-bottom: 20px;
+    transform: rotate(30deg);
+  }
+  100%{
+    margin-bottom: 0px;
+    transform: rotate(35deg);
+  }
+}
+
+
+@media (max-width:1000px) {
+  .astronaut{
+    bottom: -50px;
+    z-index: -1;
+    width: 100px;
+  }
+  h2{
+    font-size: 2.5em;
+  }
+  .about{
+    
+    p{
+      font-size: 1.2em;
+      width: 90%;
+    }
+
+    img{
+    z-index: -3;
+    transform: rotate(-35deg);
+    width: 150px;
+    top:1000px;
+  }
+  } 
+}
+
+@keyframes float {
+  50%{
+    margin-top: 30px;
+  }
+  100%{
+    margin-top: 0;
+  }
+}
