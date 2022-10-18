@@ -81,7 +81,7 @@ arrayCards.forEach(card => {
        
       }else{
         if (card == arrayCards[0]){
-          textSkills.innerHTML = "HTML was the first skill that I learned, I used in a lot of my projects, in one project specific a learn a lot of HTML in how to create a form.The challege is learning about DOM elements and how to integrate them with JS."
+          textSkills.innerHTML = "HTML was the first skill that I learned, I used in a lot of my projects, in one project specific I learn a lot of HTML in how to create a form.The challege is learning about DOM elements and how to integrate them with JS."
         }
         if(card == arrayCards[1]){
           textSkills.innerHTML = "I love CSS, It's facinating what we can do with CSS. I try to do a lot of animations and things that I don't use before to learn more and more about CSS."          
