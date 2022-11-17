@@ -24,7 +24,6 @@ const observer = new IntersectionObserver(entries => {
     observer.observe(element)
   })
 
-
 var coffe = document.querySelector('.cupCoffe')
 var sorry = document.querySelector('.sorry')
 coffe.addEventListener('click', ()=>{
@@ -32,28 +31,6 @@ coffe.addEventListener('click', ()=>{
   coffe.classList.add('animationcoffe')
   sorry.classList.remove('hide')
 })
-  const anchor = document.querySelector('.stars');
-  const astronaut = document.querySelector('.last-astronaut')
-  const rekt = anchor.getBoundingClientRect();
-  const anchorX = rekt.left + rekt.width / 2;
-  const anchorY = rekt.top + rekt.height / 2;
-
-document.addEventListener('mousemove', (e) =>{
-  const mouseX = e.clientX;
-  const mouseY = e.clientY;
-  const angleDeg = angle(mouseX, mouseY, anchorX, anchorY);
-
- 
-  astronaut.style.transform = `rotate(${ angleDeg}deg)`;
-})
-
-function angle(cx, cy, ex, ey){
-  const dy = ey - cy;
-  const dx = ex - cx;
-  const rad =Math.atan2(dy, dx);
-  const deg = rad * 180 / Math.PI;
-  return deg;
-}
 
 let montanhaVerde = document.querySelector('.montanhaverde')
 let montanhaNeve = document.querySelector('.montanhaneve')
@@ -61,6 +38,6 @@ let montanhaNeve = document.querySelector('.montanhaneve')
 window.addEventListener('scroll', function(){
   var value = window.scrollY
 
-  montanhaVerde.style.top = (value + 1000) * 0.2 + 'px'
+  montanhaVerde.style.top = (value + 300) * 0.2 + 'px'
   montanhaNeve.style.top = (value + 900)* 0.1 + 'px'
 })
