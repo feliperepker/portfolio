@@ -10,10 +10,10 @@ main{
   margin: auto;
 
   .container-img{
-    width: 30vw;
-    height: 30vw;
+    width: 40vw;
+    height: 40vw;
     overflow: hidden;
-    border-radius: 30% 30% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
     margin-top: 60px;
     transform-style: preserve-3d;
     margin-left: 40px;
@@ -22,7 +22,6 @@ main{
       height: 100%;
       width: 100%;
       object-fit: cover;
-      transform: scale(1.5);
       box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.815);
     }
   }
@@ -37,7 +36,7 @@ main{
   .dynamic-text{
     margin-left: 10px;
     font-size: 40px;
-    color:  rgb(61, 163, 170);
+    color:  $secondaryclr;
 
     span{
       position: relative;
@@ -66,7 +65,7 @@ span::after{
     font-size: 50px;
     font-weight: 600;
     margin-bottom: 10px;
-    color:  rgb(177, 123, 23);
+    color:  rgb(151, 151, 151);
     margin-left: 10px;
   }
 }
@@ -85,18 +84,19 @@ span::after{
   i{
     margin:20px;
     font-size: 5vw;
-    color: $contrastclr;
+    color: transparent;
     transition:0.5s ease-in-out;
+   
     
   }
   
 }
 i:hover{
-  color: transparent;
+  color: $contrastclr;
 }
 
 .gradientBlue{
-  background-image: linear-gradient(36deg, rgb(16, 89, 150), rgb(33, 231, 182));  
+  background-image: linear-gradient(36deg,rgb(55, 99, 84), rgb(58, 175, 148));  
  -webkit-background-clip: text;
   background-clip:text ;
 }
