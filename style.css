@@ -51,7 +51,7 @@ table {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   height: 90px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.61);
   background-color: rgba(15, 15, 15, 0.911);
@@ -214,13 +214,13 @@ header ul a:hover {
   100% {
     transform: translateY(100%);
     width: 70%;
-    transform: rotate(-45deg) translate(-7px, 14px);
+    transform: rotate(-45deg) translate(-8px, 14px);
   }
 }
 @keyframes x-to-ham {
   0% {
     width: 70%;
-    transform: rotate(-45deg) translate(-7px, 14px);
+    transform: rotate(-45deg) translate(-8px, 14px);
   }
   30% {
     transform: translateY(300%);
@@ -271,74 +271,42 @@ header ul a:hover {
 }
 main {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-height: 100vh;
   font-family: "Gemunu Libre", sans-serif;
   font-weight: 200;
-  width: 80%;
-  max-width: 1200px;
-  margin: auto;
-}
-main .container-img {
-  width: 40vw;
-  height: 40vw;
-  overflow: hidden;
-  border-radius: 50% 50% 50% 50%;
-  margin-top: 60px;
-  transform-style: preserve-3d;
-  margin-left: 40px;
-}
-main .container-img img {
-  height: 100%;
   width: 100%;
-  object-fit: cover;
-  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.815);
+  height: 100vh;
 }
-
-.wrapper {
-  display: inline-flex;
-}
-.wrapper .static-text {
-  font-size: 40px;
+main h1 {
+  font-size: 4vw;
   color: rgb(197, 197, 197);
 }
-.wrapper .dynamic-text {
-  margin-left: 10px;
-  font-size: 40px;
+main h1 span {
   color: rgb(52, 145, 125);
 }
-.wrapper .dynamic-text span {
-  position: relative;
+main h2 {
+  margin-top: 20px;
+  font-size: 2.5vw;
+  color: rgb(197, 197, 197);
 }
 
-span::after {
-  content: "";
+.montanhaverde {
+  width: 100%;
+  position: absolute;
+  filter: brightness(40%) sepia(100%) hue-rotate(190deg);
+  z-index: -200;
+  transition: ease-in-out;
+}
+
+.montanhaneve {
+  width: 80%;
   position: absolute;
   left: 0;
-  height: 100%;
-  background: rgb(15, 15, 15);
-  width: 100%;
-  border-left: 2px solid rgb(197, 197, 197);
-  animation: typing 2.5s steps(28) forwards, pulse 0.8s infinite;
-}
-
-.main-container .hello {
-  font-size: 40px;
-  color: rgb(197, 197, 197);
-  margin-bottom: 10px;
-}
-.main-container .my-name {
-  font-size: 50px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: rgb(151, 151, 151);
-  margin-left: 10px;
-}
-
-.name-container {
-  display: flex;
-  align-items: baseline;
+  z-index: -300;
+  filter: brightness(15%) sepia(100%) hue-rotate(190deg);
+  transition: ease-in-out;
 }
 
 .container-icons {
@@ -346,7 +314,6 @@ span::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
 }
 .container-icons i {
   margin: 20px;
@@ -365,88 +332,27 @@ i:hover {
   background-clip: text;
 }
 
-.gradientOrange {
-  background-image: linear-gradient(36deg, rgb(150, 41, 7), rgb(196, 88, 16), rgb(248, 203, 4));
-  -webkit-background-clip: text;
-  background-clip: text;
-}
-
-@keyframes typing {
-  100% {
-    left: 95%;
-    margin: 0 -35px 0 35px;
-    width: 0px;
-  }
-}
-@keyframes pulse {
-  100% {
-    border-left: 2px transparent;
-  }
-}
-@media (max-width: 1300px) {
-  .main-container {
-    margin-top: 40px;
-  }
-  .main-container .hello {
-    font-size: 2em;
-  }
-  .main-container .my-name {
-    font-size: 2em;
-  }
-  .wrapper .static-text {
-    font-size: 1.4em;
-  }
-  .wrapper .dynamic-text {
-    font-size: 1.4em;
-  }
-  span::after {
-    height: 100%;
-  }
-}
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
   main {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+    overflow-x: hidden;
+    width: 100vw;
   }
-  main .container-img {
-    width: 100%;
-    height: 30vh;
-    border-radius: 20px;
-    margin-top: 100px;
-    margin-left: 0px;
+  main .montanhaverde {
+    width: 300%;
+    left: -200%;
   }
-  main .main-container {
-    margin-top: 40px;
+  main .montanhaneve {
+    width: 200%;
+    left: -100%;
   }
-  main .main-container .hello {
+  main h1 {
     font-size: 2em;
   }
-  main .main-container .my-name {
-    font-size: 2em;
-  }
-  .wrapper .static-text {
-    font-size: 1.4em;
-  }
-  .wrapper .dynamic-text {
-    font-size: 1.4em;
-  }
-  span::after {
-    height: 100%;
-  }
-  .container-icons {
-    margin-bottom: 40px;
+  main h2 {
+    font-size: 1.3em;
   }
   .container-icons i {
     font-size: 4em;
-  }
-}
-@media (max-width: 500px) {
-  main .main-container .hello {
-    font-size: 1.4em;
-  }
-  main .main-container .my-name {
-    font-size: 1.7em;
   }
 }
 h2 {
@@ -463,9 +369,9 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40vh;
-  margin-top: 60px;
-  margin-bottom: 90px;
+  padding-top: 60px;
+  padding-bottom: 90px;
+  background-color: rgb(15, 15, 15);
 }
 .about p {
   max-width: 600px;
@@ -485,26 +391,6 @@ h2 {
   filter: brightness(50%);
 }
 
-.astronaut {
-  width: 8vw;
-  bottom: 20px;
-  right: 40px;
-  position: absolute;
-  filter: grayscale(100%) brightness(70%);
-  transform: rotate(35deg);
-  animation: astronaut 6s infinite ease-in-out;
-}
-
-@keyframes astronaut {
-  50% {
-    margin-bottom: 20px;
-    transform: rotate(30deg);
-  }
-  100% {
-    margin-bottom: 0px;
-    transform: rotate(35deg);
-  }
-}
 @media (max-width: 1000px) {
   .astronaut {
     bottom: -50px;
@@ -517,9 +403,10 @@ h2 {
   .about p {
     font-size: 1.2em;
     width: 90%;
+    z-index: 3;
   }
   .about img {
-    z-index: -3;
+    z-index: 0;
     transform: rotate(-35deg);
     width: 150px;
     top: 1000px;
@@ -538,9 +425,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 200px;
-  height: 60vh;
-  min-height: 500px;
+  background-color: rgb(15, 15, 15);
 }
 .skills .column-direction {
   width: 100%;
@@ -578,84 +463,55 @@ h2 {
 .skills-card {
   width: 10vw;
   min-width: 130px;
-  height: 170px;
+  height: 160px;
   font-size: 20px;
-  background-color: rgb(32, 38, 43);
+  background-color: rgb(21, 26, 25);
   border-radius: 10px 10px 10px 10px;
   text-align: center;
   font-family: "Gemunu Libre", sans-serif;
-  border-bottom: 3px solid rgb(15, 22, 20);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.603);
-  cursor: pointer;
   transition: 0.7s ease-in-out;
-  margin-top: 20px;
 }
 .skills-card h4 {
-  margin-top: 15px;
+  margin-top: 20px;
   color: rgb(165, 195, 202);
 }
-.skills-card i {
-  margin-top: 15px;
-  font-size: 80px;
-  color: transparent;
-  transition: 0.5s ease-in-out;
+.skills-card img {
+  margin-top: 20px;
+  width: 80px;
+  height: 80px;
+  filter: grayscale(20%) brightness(70%);
 }
 
 .skills-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 @media (max-width: 1000px) {
-  .skills {
-    height: 80vh;
-  }
-  .skills .column-direction {
-    flex-direction: column-reverse;
-  }
-  .skills p {
-    font-size: 1em;
-    margin: 20px auto 40px;
-    width: 90vw;
-    transition: height 0.7s;
+  .skills img {
+    width: 60px;
+    height: 60px;
   }
   .container-skills {
-    width: 90%;
+    width: 80%;
     display: grid;
     grid-template-columns: 33% 33% 33%;
-    gap: 0;
-    transition: ease 0.5s;
   }
   .container-skills .skills-card {
     margin-left: auto;
     margin-right: auto;
-    min-width: 90px;
-    height: 120px;
+    min-width: 100px;
+    height: 140px;
   }
-  .container-skills .skills-card i {
-    font-size: 50px;
+  .container-skills .skills-card h4 {
+    font-size: 18px;
   }
 }
-.transform {
-  transform: translateY(125px);
-}
-
-.transform-back {
-  transform: translateY(-115px);
-}
-
-.plus-height {
-  height: 150px;
-}
-
-.transition {
-  transition: 0s;
-}
-
 .projects {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .container-card-projects {
@@ -671,56 +527,48 @@ h2 {
   margin-left: 40px;
   flex-direction: column;
   text-align: center;
-  gap: 30px;
-  max-width: 400px;
-  padding: 20px;
-  background-color: rgb(32, 38, 43);
+  width: 40vw;
+  background-color: rgb(22, 25, 27);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.603);
-  transition: ease 1s;
-}
-.card-projects button {
-  padding: 9px 25px;
-  color: rgb(197, 197, 197);
-  font-family: "Gemunu Libre", sans-serif;
-  font-size: 1.1em;
-  border: none;
-  background-color: rgb(15, 15, 15);
-  border-radius: 7px;
-  cursor: pointer;
 }
 .card-projects p {
-  color: rgb(197, 197, 197);
-  font-size: 1em;
+  color: rgba(255, 255, 255, 0.726);
   line-height: 25px;
+  font-size: 0.9em;
+  position: absolute;
+  width: 230px;
+  margin-top: 130px;
   font-weight: 300;
+  opacity: 0;
+  transition: 1s ease;
 }
 .card-projects h3 {
-  color: rgb(165, 195, 202);
+  margin-top: 90px;
+  position: absolute;
+  color: rgb(50, 209, 183);
   font-size: 1.2em;
   font-family: "Gemunu Libre", sans-serif;
   text-transform: uppercase;
+  opacity: 0;
+  transition: 1s ease;
 }
 .card-projects img {
-  width: 350px;
-  height: 200px;
+  width: 40vw;
+  height: 230px;
   object-fit: cover;
   border-radius: 10px;
-}
-.card-projects img:hover {
-  filter: brightness(80%);
-  transition: ease-in-out 1s;
+  filter: brightness(90%);
+  transition: 1s ease;
 }
 
-.visit-link {
-  background: linear-gradient(36deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  cursor: pointer;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  margin-top: auto;
+.card-projects:hover h3 {
+  opacity: 1;
 }
-
-.visit-link:hover {
-  animation: border-rotation 3s infinite;
+.card-projects:hover p {
+  opacity: 1;
+}
+.card-projects:hover img {
+  filter: brightness(20%);
 }
 
 .invitation {
@@ -731,13 +579,14 @@ h2 {
 }
 .invitation p {
   color: rgb(197, 197, 197);
-  font-size: 20px;
+  font-size: 18px;
 }
 .invitation img {
   margin-top: 20px;
   height: 70px;
   cursor: pointer;
   filter: drop-shadow(0px 6px 2px rgba(0, 0, 0, 0.78));
+  filter: brightness(80%);
 }
 .invitation .animationcoffe {
   animation: coffe 2s ease forwards;
@@ -768,12 +617,10 @@ h2 {
 @media (max-width: 1000px) {
   .invitation-text {
     width: 90%;
+    margin-top: 40px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-  }
-  .projects {
-    margin-top: 80px;
   }
   .container-card-projects {
     display: flex;
@@ -782,76 +629,20 @@ h2 {
     justify-content: center;
   }
   .card-projects {
-    width: 80vw;
     margin-left: 0;
+    width: auto;
+  }
+  .card-projects h3 {
+    opacity: 1;
+    font-size: 1.5em;
   }
   .card-projects p {
-    font-size: 1em;
+    opacity: 1;
+    font-size: 1.2em;
   }
   .card-projects img {
-    width: 300px;
-  }
-}
-@keyframes border-rotation {
-  5% {
-    background: linear-gradient(54deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  10% {
-    background: linear-gradient(72deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  15% {
-    background: linear-gradient(90deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  20% {
-    background: linear-gradient(108deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  25% {
-    background: linear-gradient(126deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  30% {
-    background: linear-gradient(144deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  35% {
-    background: linear-gradient(162deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  40% {
-    background: linear-gradient(180deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  45% {
-    background: linear-gradient(198deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  50% {
-    background: linear-gradient(216deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  55% {
-    background: linear-gradient(234deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  60% {
-    background: linear-gradient(246deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  65% {
-    background: linear-gradient(264deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  70% {
-    background: linear-gradient(282deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  75% {
-    background: linear-gradient(300deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  80% {
-    background: linear-gradient(318deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  85% {
-    background: linear-gradient(336deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  90% {
-    background: linear-gradient(354deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  95% {
-    background: linear-gradient(372deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
-  }
-  100% {
-    background: linear-gradient(390deg, rgb(16, 89, 150), rgb(33, 231, 182)) border-box;
+    width: 90vw;
+    filter: brightness(40%);
   }
 }
 .contacts {
@@ -924,7 +715,16 @@ footer p {
   font-size: 0.8em;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.bodyHidden {
+  overflow-x: hidden;
+}
+
 body {
+  overflow-x: hidden;
   font-family: "Inter", sans-serif;
   background-color: rgb(15, 15, 15);
 }

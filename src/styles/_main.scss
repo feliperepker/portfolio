@@ -1,93 +1,56 @@
 main{
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-height: 100vh;
   font-family: $ffsec;
   font-weight: 200;
-  width: 80%;
-  max-width: 1200px ;
-  margin: auto;
-
-  .container-img{
-    width: 40vw;
-    height: 40vw;
-    overflow: hidden;
-    border-radius: 50% 50% 50% 50%;
-    margin-top: 60px;
-    transform-style: preserve-3d;
-    margin-left: 40px;
-    
-    img{
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-      box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.815);
+  width:100%;
+  height: 100vh;
+  
+  h1{
+    font-size: 4vw;
+    color: $contrastclr;
+    span{
+      color: $secondaryclr;
     }
   }
-}
-.wrapper{
-  display: inline-flex;
-
-  .static-text{
-    font-size: 40px;
+  h2{
+    margin-top: 20px;
+    font-size: 2.5vw;
     color: $contrastclr;
   }
-  .dynamic-text{
-    margin-left: 10px;
-    font-size: 40px;
-    color:  $secondaryclr;
-
-    span{
-      position: relative;
-    }
-  }
 }
-span::after{
-  content: "";
-  position: absolute;
-  left: 0; 
-  height: 100%;
-  background: $primaryclr;
+
+.montanhaverde{
   width: 100%;
-  border-left: 2px solid $contrastclr;
-  animation: typing 2.5s steps(28) forwards, pulse 0.8s infinite;
- 
+  position: absolute;
+  filter: brightness(40%) sepia(100%) hue-rotate(190deg);
+  z-index: -200;
+  transition: ease-in-out
 }
-
-.main-container{
-  .hello {
-    font-size: 40px;
-    color: $contrastclr; 
-    margin-bottom: 10px;
-  }
-  .my-name{
-    font-size: 50px;
-    font-weight: 600;
-    margin-bottom: 10px;
-    color:  rgb(151, 151, 151);
-    margin-left: 10px;
-  }
+.montanhaneve{
+  width: 80%;
+  position: absolute;
+  left: 0;
+  z-index: -300;
+  filter: brightness(15%) sepia(100%) hue-rotate(190deg);
+  transition: ease-in-out;
+  
 }
-.name-container{
-  display: flex;
-  align-items: baseline;
-}
+  
 
 .container-icons{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 30px;
   
   i{
-    margin:20px;
+    margin: 20px;
     font-size: 5vw;
     color: transparent;
     transition:0.5s ease-in-out;
-   
-    
   }
   
 }
@@ -100,102 +63,33 @@ i:hover{
  -webkit-background-clip: text;
   background-clip:text ;
 }
-.gradientOrange{
-  background-image: linear-gradient(36deg, rgb(150, 41, 7),rgb(196, 88, 16) ,rgb(248, 203, 4));  
-  -webkit-background-clip: text;
-   background-clip:text ;
-}
 
-@keyframes typing {
-  100%{
-    left: 95%;
-    margin: 0 -35px 0 35px;
-    width: 0px;
-  }
-}
-@keyframes pulse {
-  100%{
-    border-left: 2px transparent;
-  }
-}
-@media (max-width:1300px) {
-  .main-container{
-    margin-top: 40px;
-    .hello{
+
+@media (max-width:900px) {
+  main{
+    .montanhaverde{
+      width: 300%; 
+      left: -200%; 
+    }
+    .montanhaneve{
+      width: 200%;
+      left: -100%
+    }
+    overflow-x: hidden;
+    width: 100vw;
+
+    h1{
       font-size: 2em;
     }
-      .my-name{
-        font-size: 2em;
-      }
-  }
-  .wrapper{
-    .static-text{
-      font-size: 1.4em;
+    h2{
+      font-size: 1.3em;
     }
-    .dynamic-text{
-      font-size: 1.4em;
-    }
-    
-  }
-  span::after{
-      height: 100%;
-    }
-}
-@media (max-width:1000px) {
 
-  main{
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    .container-img{
-      width: 100%;
-      height: 30vh;
-      border-radius: 20px;
-      margin-top: 100px;
-      margin-left: 0px;
-    }
-   
-     
-    .main-container{
-      margin-top: 40px;
-      .hello{
-        font-size: 2em;
-      }
-        .my-name{
-          font-size: 2em;
-        }
-    }
   }
-.wrapper{
-  .static-text{
-    font-size: 1.4em;
-  }
-  .dynamic-text{
-    font-size: 1.4em;
+  .container-icons{
+    i{
+      font-size: 4em;
+    }
   }
   
-}
-span::after{
-    height: 100%;
-  }
-
-.container-icons{
-  margin-bottom: 40px;
-  i{
-    font-size: 4em;
-  }
-}
-}
-
-@media (max-width: 500px) {
-  main{
-    .main-container{
-      .hello{
-        font-size: 1.4em;
-      }
-        .my-name{
-          font-size: 1.7em;
-        }
-    }
-  }
 }

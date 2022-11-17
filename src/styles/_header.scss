@@ -1,6 +1,6 @@
 
 header{
-  width: 100%;
+  width: 100vw;
   height: 90px;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.61);
   background-color: rgba(15, 15, 15, 0.911);
@@ -176,14 +176,14 @@ header{
   100%{
       transform: translateY(100%);
       width: 70%;
-      transform: rotate(-45deg) translate(-7px, 14px);
+      transform: rotate(-45deg) translate(-8px, 14px);
 
   }
 }
 @keyframes x-to-ham{
   0%{
       width: 70%;
-      transform: rotate(-45deg) translate(-7px, 14px);
+      transform: rotate(-45deg) translate(-8px, 14px);
   }
 
   30%{

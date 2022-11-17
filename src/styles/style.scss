@@ -19,8 +19,16 @@ $ffsec:  'Gemunu Libre', sans-serif;
 @import 'contacts';
 @import 'footer';
 
+html{
+  scroll-behavior: smooth;
+}
 
+
+.bodyHidden{
+  overflow-x: hidden;
+}
 body{
+  overflow-x: hidden;
   font-family: $fontfamily;
   background-color: $primaryclr;
 }

@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/179185e38c.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./src/assets/favicon.ico" type="image/x-icon">
-    <script type="module" src="./src/scripts/vanilla-tilt.min.js"></script>
    
     
   </head>
   <body>
+    <div class="bodyHidden">
     <header>
       <a href="#about" class="logo-link">
           <div class="logo">
-          <img src="https://cdn-icons-png.flaticon.com/512/8095/8095792.png" id="left-logo" alt="">
+          <img src="https://cdn-icons-png.flaticon.com/512/7926/7926622.png" id="left-logo" alt="">
           <h1>FR</h1>
-          <img src="https://cdn-icons-png.flaticon.com/512/8095/8095792.png" id="right-logo" alt="">
+          <img src="https://cdn-icons-png.flaticon.com/512/7926/7926622.png" id="right-logo" alt="">
       </div>
       </a>
    
@@ -36,26 +36,17 @@
         </nav>
       </div>
     </header>
-    <main class="init-hidden" id="about">
-      <div class="main-container ">
-        <div class="name-container">
-          <h1 class="hello">Hello, I am</h1>
-          <h1 class="my-name">Felipe Repker</h1>
-        </div>
-        <div class="wrapper">
-          <div class="static-text">A</div>
-          <div class="dynamic-text">
-            <p><span>Fullstack Development Student.</span></p>
-          </div>
-        </div>
-        <div class="container-icons">
-          <a target="_blank" href="https://www.linkedin.com/in/felipe-repker-2937b0122/"><i class="fa-brands fa-linkedin gradientBlue"></i></a>
-          <a target="_blank" href="https://github.com/feliperepker"><i class="fa-brands fa-github gradientBlue"></i></a>
-        </div>
-      </div> 
-      <div class="container-img">
-        <img src="./src/assets/Captura de tela 2022-11-16 211107.png" alt="A photo of mine.">
+    <main class="init-hidden" >
+      
+      <h1>Hello, I'am <span>Felipe Repker</span></h1>
+      <h2>A Fullstack Development Student</h2>
+      
+      <div class="container-icons">
+        <a target="_blank" href="https://www.linkedin.com/in/felipe-repker-2937b0122/"><i class="fa-brands fa-linkedin gradientBlue"></i></a>
+        <a target="_blank" href="https://github.com/feliperepker"><i class="fa-brands fa-github gradientBlue"></i></a>
       </div>
+          <img src="./src/assets/montanha.png" class="montanhaverde" alt="">
+          <img src="./src/assets/montanhaneve.png" class="montanhaneve" alt="">
     </main>
       <section class="init-hidden about">
         <h2>About</h2>
@@ -70,32 +61,29 @@
         <div class="column-direction">
           <div class="container-skills">
             <div class="skills-card">
-              <h4>HTML5</h4>
-              <i class="fa-brands fa-html5 gradientBlue"></i>
+              <img src="https://cdn.iconscout.com/icon/free/png-256/javascript-23-1174949.png" alt="">
+              <h4>JavaScript</h4>
             </div>
             <div class="skills-card">
-              <h4>CSS3</h4>
-              <i class="fa-brands fa-css3-alt gradientBlue"></i>
+              <img src="https://logospng.org/download/typescript/typescript-2048.png" alt="">
+              <h4>TypeScript</h4>
             </div>
             <div class="skills-card">
+              <img src="https://cdn-icons-png.flaticon.com/512/5968/5968358.png" alt="">
               <h4>SASS</h4>
-              <i class="fa-brands fa-sass gradientBlue"></i>
             </div>
             <div class="skills-card">
-              <h4>REACT</h4>
-              <i class="fa-brands fa-react gradientBlue"></i>
+              <img src="https://ionicframework.com/docs/icons/logo-react-icon.png" alt="">
+              <h4>React</h4>
             </div>
             <div class="skills-card">
-              <h4>PYTHON</h4>
-              <i class="fa-brands fa-python gradientBlue"></i>
+              <img src="https://yogalayout.com/static/reactnative.4e03ea5d.png" alt="">
+              <h4>React Native</h4>
             </div>
             <div class="skills-card">
-              <h4>SQL</h4>
-              <i class="fa-solid fa-database gradientBlue"></i>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/.NET_Core_Logo.svg/2048px-.NET_Core_Logo.svg.png" alt="">
+              <h4>.NET CORE</h4>
             </div>
-          </div>
-          <div class="transition-text">
-            <p id="skills-text">Choose one skill</p>
           </div>
         </div>
       
@@ -104,28 +92,24 @@
           <h2>Projects</h2>
           <div class="container-card-projects">
             <div class="card-projects">
-              <h3>NLW E-Sports</h3>
               <a target="_blank" href="https://github.com/feliperepker/nlw"><img src="./src/assets/nlw.png" alt="A photo from my project develop in NLW"></a>
+              <h3>NLW E-Sports</h3>
               <p>Vite, React, React Native, Tailwind, Node and Prisma.</p>
-              <a target="_blank" href="https://github.com/feliperepker/nlw" class="visit-link"><button>Visit</button></a>
             </div>
             <div class="card-projects">
-              <h3>Components Delivery</h3>
               <a target="_blank" href="https://github.com/feliperepker/deliveryapp"><img src="./src/assets/deliverytablet.png" alt="A photo from my project."></a>
+              <h3>Components Delivery</h3>
               <p>React and .NET 6.0</p>
-              <a target="_blank" href="https://github.com/feliperepker/deliveryapp" class="visit-link"><button>Visit</button></a>
             </div>
             <div class="card-projects">
-              <h3>NLW Copa</h3>
-              <a target="_blank" href="https://github.com/feliperepker/nlw-copa"><img src="./src/assets/nlwcopa.png" alt="A photo from my project."></a>
-              <p>Next.JS, React, React Native, Tailwind, Node and Prisma.</p>
-              <a target="_blank" href="https://github.com/feliperepker/nlw-copa" class="visit-link"><button>Visit</button></a>
-            </div>
-            <div class="card-projects">
-              <h3>OBPC Website</h3>
               <a target="_blank" href="https://feliperepker.github.io/obpc.com/"><img src="./src/assets/obpcweb.png" alt="A photo from my project."></a>
+              <h3>OBPC Website</h3>
               <p>HTML, SASS and JavaScript.</p>
-              <a target="_blank" href="https://feliperepker.github.io/obpc.com/" class="visit-link"><button>Visit</button></a>
+            </div>
+            <div class="card-projects">
+              <a target="_blank" href="https://github.com/feliperepker/nlw-copa"><img src="./src/assets/nlwcopa.png" alt="A photo from my project."></a>
+              <h3>NLW Copa</h3>
+              <p>Next.JS, React, React Native, Tailwind, Node and Prisma.</p>
             </div>
           </div>
 
@@ -133,7 +117,7 @@
             <div class="invitation-text">
                <p>Please, take a coffe! I'm working on my next project..</p>
                <p class="hide sorry">Sorry for that!</p> 
-               <img class="cupCoffe" src="https://cdn-icons-png.flaticon.com/512/961/961481.png" alt="A photo from a coffe that drops when click.">
+               <img class="cupCoffe" src="https://cdn-icons-png.flaticon.com/512/3127/3127430.png" alt="A photo from a coffe that drops when click.">
               </div>
           
           </div>
@@ -142,7 +126,7 @@
         <h2>Contacts</h2>
           <p>Let's chat!</p>
         <div class="container-icons">
-          <a target="_blank" href="https://www.linkedin.com/in/felipe-repker-2937b0122/"><i class="fa-brands fa-linkedin gradientOrange"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/felipe-repker-2937b0122/"><i class="fa-brands fa-linkedin gradientBlue"></i></a>
           <a target="_blank" href="https://github.com/feliperepker"><i class="fa-brands fa-github gradientBlue"></i></a>
         </div>
         <img class="last-astronaut" src="https://cdn-icons-png.flaticon.com/512/1049/1049387.png" alt="A little dog floating">
@@ -152,5 +136,6 @@
        <p>Thank you for get in to the end!</p>
       </footer>
       <script type="module" src="./src/scripts/main.js"></script>
+    </div>
   </body>
 </html>
