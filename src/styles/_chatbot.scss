@@ -1,0 +1,111 @@
+.container-chat{
+  background-color: rgb(28, 29, 31);
+  border: 1px solid rgb(75, 75, 75);
+  max-width: 300px;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.header-chat{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(75, 75, 75);
+  padding-bottom: 10px;
+  img{
+    padding: 6px;
+    background-color: $primaryclr;
+    border: 3px solid $primaryclr;
+    border-radius: 100%;
+    width: 30px;
+  }
+  p{
+    margin-left: 10px;
+    font-family: $ffsec;
+    color: $secondaryclr;
+  }
+}
+
+.content-chat{
+  height: 360px;
+  overflow-y: scroll;
+  p{
+    font-size: 0.9em;
+    width: fit-content;
+    max-width: 90%;
+    margin: 5px;
+    padding: 9px 7px;
+    border-radius: 10px;
+    background-color: rgb(16, 17, 17);
+    line-height: 20px;
+    transition: 2s ease;
+
+    a{
+      color: rgb(69, 121, 124);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    strong{
+      font-weight: bold;
+    }
+  }
+  .text-chat-rigth{
+    background-color: gray;
+    margin-left: auto;
+    margin-top: 10px;
+    max-width: 80%;
+    width: fit-content;
+  }
+}
+
+#span1{
+  animation: loading 1s ease infinite;
+}
+#span2{
+  animation: loading 1.01s ease infinite;
+}
+#span3{
+  animation: loading 1.02s ease infinite;
+}
+@keyframes loading{
+  100%{
+    color: rgb(49, 49, 49);
+  }
+}
+
+.content-chat::-webkit-scrollbar{
+
+  width: 12px;
+  background-color: rgba(48, 48, 48, 0.658);
+  border: 5px solid rgb(28, 29, 31);
+}
+.content-chat::-webkit-scrollbar-thumb{
+  border: 2px solid rgb(28, 29, 31);
+}
+
+.bottom-chat{
+  border-top: 1px solid rgb(75, 75, 75);
+  padding: 10px; 
+  display: flex;
+  gap: 5px;
+
+ button{
+  background-color: $secondaryclr;
+  border:  none;
+  padding: 9px;
+  font-size: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: $contrastclr;
+  height: 30px;
+  min-width: 90px;
+  transition: 0.5s ease;
+ }
+
+ button:hover{
+  background-color: rgb(60, 90, 84);
+ }
+}

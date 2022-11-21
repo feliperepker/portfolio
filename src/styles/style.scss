@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@500&display=swap');
 //variables
-$primaryclr:rgb(11, 15, 15);
+$primaryclr:rgb(10,10,13);
 $secondaryclr: rgb(52, 145, 125);
 $contrastclr:rgb(197, 197, 197);
 $fontfamily:'Inter', sans-serif;
@@ -18,6 +18,7 @@ $ffsec:  'Gemunu Libre', sans-serif;
 @import 'projects';
 @import 'contacts';
 @import 'footer';
+@import 'chatbot';
 
 html{
   scroll-behavior: smooth;

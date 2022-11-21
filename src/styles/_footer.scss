@@ -1,9 +1,10 @@
 footer{
-  background-color: rgb(17, 18, 22);
+  background-color: $primaryclr;
   height: 100px;
   display: flex;
   align-items: center;
   box-shadow: 3px 0px 10px 1px rgba(0, 0, 0, 0.541);
+  margin-top: 300px;
   
   p{
     color: rgb(141, 141, 141);
