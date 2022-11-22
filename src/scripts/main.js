@@ -38,6 +38,13 @@ let montanhaNeve = document.querySelector('.montanhaneve')
 window.addEventListener('scroll', function(){
   var value = window.scrollY
 
-  montanhaVerde.style.top = (value + 300) * 0.2 + 'px'
-  montanhaNeve.style.top = (value + 900)* 0.1 + 'px'
+
+  var x = window.matchMedia("(max-width: 700px)")
+  if(x.matches){
+    montanhaVerde.style.top = (value +760) * 0.3 + 'px'
+    montanhaNeve.style.top = (value + 170)* 0.9 + 'px'
+  }else{
+    montanhaVerde.style.top = (value +300) * 0.3 + 'px'
+    montanhaNeve.style.top = (value + 65)* 0.9 + 'px'
+  }
 })

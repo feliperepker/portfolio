@@ -27,12 +27,13 @@ main{
   position: absolute;
   filter: brightness(40%) sepia(100%) hue-rotate(190deg);
   z-index: -200;
+  bottom: -28px;
   transition: ease-in-out
 }
 .montanhaneve{
   width: 80%;
   position: absolute;
-  left: 0;
+  left: -300px;
   z-index: -300;
   filter: brightness(15%) sepia(100%) hue-rotate(190deg);
   transition: ease-in-out;

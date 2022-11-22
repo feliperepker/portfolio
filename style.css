@@ -297,13 +297,14 @@ main h2 {
   position: absolute;
   filter: brightness(40%) sepia(100%) hue-rotate(190deg);
   z-index: -200;
+  bottom: -28px;
   transition: ease-in-out;
 }
 
 .montanhaneve {
   width: 80%;
   position: absolute;
-  left: 0;
+  left: -300px;
   z-index: -300;
   filter: brightness(15%) sepia(100%) hue-rotate(190deg);
   transition: ease-in-out;
@@ -372,7 +373,7 @@ h2 {
   justify-content: center;
   padding-top: 60px;
   padding-bottom: 90px;
-  background-color: rgb(10, 10, 13);
+  background-color: rgb(14, 15, 19);
 }
 .about p {
   max-width: 600px;
@@ -393,11 +394,6 @@ h2 {
 }
 
 @media (max-width: 1000px) {
-  .astronaut {
-    bottom: -50px;
-    z-index: -1;
-    width: 100px;
-  }
   h2 {
     font-size: 2.5em;
   }
@@ -426,7 +422,7 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(10, 10, 13);
+  background-color: rgb(14, 15, 19);
 }
 .skills .column-direction {
   width: 100%;
@@ -512,7 +508,8 @@ h2 {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 80px;
+  padding-top: 80px;
+  background-color: rgb(14, 15, 19);
 }
 
 .container-card-projects {
@@ -649,69 +646,25 @@ h2 {
   }
 }
 .contacts {
-  margin-top: 80px;
+  padding-top: 80px;
   height: 60vh;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: rgb(14, 15, 19);
+  padding-bottom: 300px;
 }
 .contacts p {
   font-size: 1.3em;
   color: rgb(197, 197, 197);
 }
 
-.last-astronaut {
-  height: 100px;
-  position: absolute;
-  top: auto;
-  margin-top: 160px;
-  right: 130px;
-  filter: brightness(80%);
-  animation: astronaut-dog 6s ease infinite;
-}
-
-.stars {
-  height: 300px;
-  position: absolute;
-  z-index: -1;
-  top: auto;
-  right: 50px;
-  margin-top: 70px;
-  filter: grayscale(100%) brightness(70%);
-}
-
-@media (max-width: 1000px) {
-  .stars {
-    margin-top: 180px;
-  }
-  .last-astronaut {
-    margin-top: 260px;
-    animation: astronaut-dog-mobile 4s ease infinite;
-  }
-}
-@keyframes astronaut-dog-mobile {
-  50% {
-    margin-top: 280px;
-  }
-  100% {
-    margin-top: 260px;
-  }
-}
-@keyframes astronaut-dog {
-  50% {
-    margin-top: 180px;
-  }
-  100% {
-    margin-top: 160px;
-  }
-}
 footer {
-  background-color: rgb(10, 10, 13);
+  background-color: rgb(14, 15, 19);
   height: 100px;
   display: flex;
   align-items: center;
   box-shadow: 3px 0px 10px 1px rgba(0, 0, 0, 0.541);
-  margin-top: 300px;
 }
 footer p {
   color: rgb(141, 141, 141);
@@ -739,8 +692,8 @@ footer p {
 }
 .header-chat img {
   padding: 6px;
-  background-color: rgb(10, 10, 13);
-  border: 3px solid rgb(10, 10, 13);
+  background-color: rgb(14, 15, 19);
+  border: 3px solid rgb(14, 15, 19);
   border-radius: 100%;
   width: 30px;
 }
@@ -841,24 +794,24 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Inter", sans-serif;
-  background-color: rgb(10, 10, 13);
+  background-color: rgb(14, 15, 19);
 }
 
 ::-webkit-scrollbar {
   width: 12px;
   background-color: rgba(155, 155, 155, 0.658);
-  border: 5px solid rgb(10, 10, 13);
+  border: 5px solid rgb(14, 15, 19);
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: rgb(52, 145, 125);
   border-radius: 50px;
-  border: 2px solid rgb(10, 10, 13);
+  border: 2px solid rgb(14, 15, 19);
 }
 
 .init-hidden {
   opacity: 0;
-  transition: opacity 3s linear;
+  transition: opacity 1s linear;
 }
 
 .init-hidden-off {

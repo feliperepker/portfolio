@@ -34,7 +34,8 @@ buttonHi.addEventListener('click', () =>{
   },3000)
 
   buttonHi.disabled = true
-  buttonHi.style.display = 'none';
+  buttonHi.style.backgroundColor = 'rgb(60, 90, 84)';
+  buttonHi.style.cursor = 'default'
 })
 
 
@@ -96,7 +97,8 @@ buttonAbout.addEventListener('click', () =>{
   },10000)
   
   buttonAbout.disabled = true
-  buttonAbout.style.display = 'none';
+  buttonAbout.style.backgroundColor = 'rgb(60, 90, 84)';
+  buttonAbout.style.cursor = 'default'
 })
 
 buttonContact.addEventListener('click', () =>{
@@ -152,5 +154,6 @@ setTimeout(() =>{
 },9000)
 
   buttonContact.disabled = true
-  buttonContact.style.display = 'none';
+  buttonContact.style.backgroundColor = 'rgb(60, 90, 84)';
+  buttonContact.style.cursor = 'default'
 })
