@@ -15,7 +15,7 @@ buttonHi.addEventListener('click', () =>{
 
   setTimeout(() =>{
      divContainer.insertAdjacentHTML('beforeend',
-  `<p class="text-chat-rigth">I just want to say Hi!</p>`)
+  `<p class="text-chat-rigth">I just wanted to say hi!</p>`)
   },1000)
   setTimeout(() =>{
     divContainer.insertAdjacentHTML('beforeend',
@@ -30,7 +30,7 @@ buttonHi.addEventListener('click', () =>{
  
   setTimeout(() =>{
       divContainer.insertAdjacentHTML('beforeend',
-  `<p>Helloooo! Thanks for get in my portfolio!</p>`)
+  `<p>Helloooo!! :)</p>`)
   },3000)
 
   buttonHi.disabled = true
@@ -64,7 +64,7 @@ buttonAbout.addEventListener('click', () =>{
 
   setTimeout(() =>{
      divContainer.insertAdjacentHTML('beforeend',
-  `<p>Yeah, Sure!</p>`)
+  `<p>Yeah, sure!</p>`)
   },3000)
 
   setTimeout(() =>{
@@ -79,7 +79,7 @@ buttonAbout.addEventListener('click', () =>{
 
   setTimeout(() =>{
     divContainer.insertAdjacentHTML('beforeend',
-  `<p>Soo, he started programing in January 2022, his first contact with programing was doing simple things in Python, but now he really loves to program with JavaScript.</p>`)
+  `<p>Soo, he started programing in January 2022, his first contact with programing was doing simple things in Python... but now he really loves to program with JavaScript.</p>`)
   },5000)
   setTimeout(() =>{
     divContainer.insertAdjacentHTML('beforeend',
@@ -92,7 +92,7 @@ buttonAbout.addEventListener('click', () =>{
   },10000)
   setTimeout(() =>{
     divContainer.insertAdjacentHTML('beforeend',
-   `<p>To learn better, he likes to be chalenged. For example, he set it a goal to create me and create this entire chat without asking help for google or another developer. Preaty cool, right?</p>`)
+   `<p>Fun fact, to learn better he likes to be chalenged. For example, he set it a goal to create me and create this entire chat without asking help for google or another developer. Pretty cool, right?</p>`)
 
   },10000)
   
