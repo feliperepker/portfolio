@@ -40,9 +40,14 @@ window.addEventListener('scroll', function(){
 
 
   var x = window.matchMedia("(max-width: 700px)")
+  var y = window.matchMedia("(max-width: 1500px)")
   if(x.matches){
     montanhaVerde.style.top = (value +760) * 0.3 + 'px'
     montanhaNeve.style.top = (value + 170)* 0.9 + 'px'
+    
+  }else if(y.matches){
+    montanhaVerde.style.top = (value +500) * 0.3 + 'px'
+    montanhaNeve.style.top = (value + 5)* 0.9 + 'px'
   }else{
     montanhaVerde.style.top = (value +800) * 0.3 + 'px'
     montanhaNeve.style.top = (value + 5)* 0.9 + 'px'
