@@ -44,7 +44,7 @@ window.addEventListener('scroll', function(){
     montanhaVerde.style.top = (value +760) * 0.3 + 'px'
     montanhaNeve.style.top = (value + 170)* 0.9 + 'px'
   }else{
-    montanhaVerde.style.top = (value +300) * 0.3 + 'px'
-    montanhaNeve.style.top = (value + 65)* 0.9 + 'px'
+    montanhaVerde.style.top = (value +800) * 0.3 + 'px'
+    montanhaNeve.style.top = (value + 5)* 0.9 + 'px'
   }
 })
