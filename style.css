@@ -277,7 +277,8 @@ main {
   font-family: "Gemunu Libre", sans-serif;
   font-weight: 200;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
+  position: relative;
 }
 main h1 {
   font-size: 4vw;
@@ -296,16 +297,15 @@ main h2 {
   width: 100%;
   position: absolute;
   filter: brightness(40%) sepia(100%) hue-rotate(190deg);
-  z-index: -200;
-  bottom: -28px;
+  z-index: -1;
   transition: ease-in-out;
 }
 
 .montanhaneve {
-  width: 80%;
+  width: 100%;
   position: absolute;
   left: -300px;
-  z-index: -300;
+  z-index: -2;
   filter: brightness(15%) sepia(100%) hue-rotate(190deg);
   transition: ease-in-out;
   margin-bottom: 200px;
@@ -336,17 +336,14 @@ i:hover {
 
 @media (max-width: 900px) {
   main {
-    overflow-x: hidden;
+    overflow: hidden;
     width: 100vw;
   }
   main .montanhaverde {
     width: 300%;
-    left: -200%;
   }
   main .montanhaneve {
-    width: 200%;
-    left: -100%;
-    top: 150px;
+    width: 300%;
   }
   main h1 {
     font-size: 2em;
@@ -397,6 +394,9 @@ h2 {
 @media (max-width: 1000px) {
   h2 {
     font-size: 2.5em;
+  }
+  .about {
+    padding-top: 0px;
   }
   .about p {
     font-size: 1.2em;

@@ -1,10 +1,10 @@
-h2{
+h2 {
   color: $secondaryclr;
   font-family: $ffsec;
   font-size: 3em;
   margin-bottom: 40px;
 }
-.about{
+.about {
   width: 100%;
   text-align: center;
   display: flex;
@@ -14,8 +14,8 @@ h2{
   padding-top: 130px;
   padding-bottom: 90px;
   background-color: $primaryclr;
- 
-  p{
+
+  p {
     max-width: 600px;
     width: 80vw;
     color: $contrastclr;
@@ -25,48 +25,43 @@ h2{
     font-weight: 300;
   }
 
-  img{
+  img {
     width: 15vw;
     position: absolute;
     transform: rotate(-35deg);
     left: 50px;
     animation: float 3s ease-in-out infinite;
-    filter:brightness(50%)
+    filter: brightness(50%);
   }
 }
 
-
-
-
-
-
-@media (max-width:1000px) {
-
-  h2{
+@media (max-width: 1000px) {
+  h2 {
     font-size: 2.5em;
   }
-  .about{
-    
-    p{
+  .about {
+    padding-top: 0px;
+
+    p {
       font-size: 1.2em;
       width: 90%;
       z-index: 3;
     }
 
-    img{
-    z-index: 0;
-    transform: rotate(-35deg);
-    width: 150px;
-    top: 1000px;
+    img {
+      z-index: 0;
+      transform: rotate(-35deg);
+      width: 150px;
+      top: 1000px;
+    }
   }
-  } 
 }
 
 @keyframes float {
-  50%{
+  50% {
     margin-top: 30px;
   }
-  100%{
+  100% {
     margin-top: 0;
   }
 }
